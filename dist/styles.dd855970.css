@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+}
+
+#app {
+  width: 80vw;
+  max-width: 1300px;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-areas: 'add-item grocery-list';
+  gap: 2em;
+}
+
+h2 {
+  display: inline-block;
+  padding: 0.3em 1.5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+section#add-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: add-item;
+}
+
+section#add-item h2 {
+  background-color: rgba(79, 190, 225, 0.4);
+  border: 2px solid #4fbee1;
+}
+
+section#add-item form {
+  background-color: white;
+  border: 2px solid #4fbee1;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  margin-top: -2px;
+  padding: 1.5em;
+}
+
+section#add-item form label {
+  display: block;
+}
+
+section#add-item form input {
+  font-size: 1.2em;
+  padding: 0.5em;
+  width: 100%;
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+}
+
+section#add-item form .quantity-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+}
+
+section#add-item form .quantity-box .quantity-counter {
+  margin: 0 0.5em;
+}
+
+section#add-item form .quantity-box select {
+  margin-left: 1em;
+  padding: 0.2em;
+  font-size: 0.8em;
+}
+
+section#add-item form .add-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2em;
+}
+
+section#add-item form .add-buttons button {
+  font-size: 1.2em;
+  padding: 0.5em 1.5em;
+  margin: 0 0.5em;
+  border-radius: 5px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+section#add-item form .add-buttons button.grocery-btn {
+  background-color: rgba(146, 240, 89, 0.4);
+  border: 2px solid #92f059;
+}
+
+section#add-item form .add-buttons button.grocery-btn:hover {
+  background-color: rgba(146, 240, 89, 0.8);
+}
+
+section#add-item form .add-buttons button.wishlist-btn {
+  background-color: rgba(190, 124, 240, 0.4);
+  border: 2px solid #be7cf0;
+}
+
+section#add-item form .add-buttons button.wishlist-btn:hover {
+  background-color: rgba(190, 124, 240, 0.8);
+}
+
+section#grocery-list {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: grocery-list;
+  height: 80vh;
+}
+
+section#grocery-list h2 {
+  background-color: rgba(146, 240, 89, 0.4);
+  border: 2px solid #92f059;
+}
+
+section#grocery-list .list-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#grocery-list .list-heading h2 {
+  margin-right: 1em;
+}
+
+section#grocery-list .list {
+  background-color: white;
+  border: 2px solid #92f059;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -2px;
+  padding: 1.5em;
+}
+
+@media (max-width: 1025px) {
+  #app {
+    width: 95vw;
+  }
+  .container {
+        grid-template-areas: 'add-item add-item' 'grocery-list grocery-list';
+  }
+  section#grocery-list {
+    height: unset;
+  }
+}
+
+
+/*# sourceMappingURL=/styles.dd855970.css.map */

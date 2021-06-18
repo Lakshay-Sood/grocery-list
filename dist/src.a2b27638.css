@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'add-item grocery-list';
+  gap: 10px;
+}
+
+@media (max-width: 1025px) {
+  .container {
+        grid-template-areas: 'add-item add-item' 'grocery-list grocery-list';
+  }
+}
+
+section.add-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: add-item;
+}
+
+section.grocery-list {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: grocery-list;
+}
+
+
+/*# sourceMappingURL=/src.a2b27638.css.map */
